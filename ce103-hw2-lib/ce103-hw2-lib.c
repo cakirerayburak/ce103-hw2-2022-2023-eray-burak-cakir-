@@ -268,6 +268,13 @@ int ce103_strcmp(const char* fiLhs, const char* fiRhs)
 char* ce103_strcpy(char* foDestination, const char* fiSource)
 {
 	//TODO:Start from Here...
+	
+	{
+		char* ret = foDestination;
+		while ((*foDestination++ = *fiSource++) != '\0');
+		////Increment the foDestination and fiSource pointers one by one and make them equal to each other, while not equal to '\0' we are returning to the reject pointer
+		return ret;
+	}
 	return 0;
 }
 
@@ -361,7 +368,6 @@ void ce103_bin2hex(unsigned char* fiBin, int fiBinLen, char* foHex)
 int ce103_gcd(int fiNum1, int fiNum2)
 {
 	//TODO:Start from Here...
-		//TODO:Start from Here...
 	//All of the following functions find the greatest common divisor of a number.
 	{
 		int i, con;
