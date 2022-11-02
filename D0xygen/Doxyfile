@@ -61,7 +61,7 @@ PROJECT_BRIEF          = "Eray Burak CAKIR"
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = C:/Users/Burak/Homework2/doxygen/Resources/rteulogo.ico
+PROJECT_LOGO           = C:/Users/Burak/Homework2/ce103-hw2-2022-2023-eray-burak-cakir/D0xygen/Resources/rteulogo.ico
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
