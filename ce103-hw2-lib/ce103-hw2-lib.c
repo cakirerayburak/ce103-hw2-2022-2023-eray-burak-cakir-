@@ -303,6 +303,22 @@ void ce103_hex2bin(char* fiHex, int fiHexLen, unsigned char* foBin)
 void ce103_bin2hex(unsigned char* fiBin, int fiBinLen, char* foHex)
 {
 	//TODO:Start from Here...
+
+	int c, d, * end = fiBin + fiBinLen;
+	// Variables defined
+	while (fiBin < end)
+		//It is commanded to continue processing as long as it is less than the last.
+	{
+		c = *(fiBin++);
+		d = c >> 4;
+		// d>c keep going as long as
+		*(foHex++) = d + (d > 9 ? 55 : 48);
+		d = c & 15;
+		//c and 15 keep going as long as
+		*(foHex++) = d + (d > 9 ? 55 : 48);
+	}
+	*foHex = 0;
+	return fiBin;
 }
 
 
