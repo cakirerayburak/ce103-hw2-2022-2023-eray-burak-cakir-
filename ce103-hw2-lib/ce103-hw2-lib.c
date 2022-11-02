@@ -438,7 +438,7 @@ int ce103_gcd(int fiNum1, int fiNum2)
 	//TODO:Start from Here...
 	//All of the following functions find the greatest common divisor of a number.
 	{
-		int i, con;
+		int i, gcd;
 		//Required variables defined
 
 		if (fiNum1 != fiNum2)
@@ -447,7 +447,7 @@ int ce103_gcd(int fiNum1, int fiNum2)
 			for (i = 1; i <= fiNum1 && i <= fiNum2; ++i)
 			{
 				if (fiNum1 % i == 0 && fiNum2 % i == 0)
-					con = i;
+					gcd = i;
 			}
 		}
 		else
@@ -458,4 +458,7 @@ int ce103_gcd(int fiNum1, int fiNum2)
 		return 1;
 	}
 	return -1;
+
 }
+
+
