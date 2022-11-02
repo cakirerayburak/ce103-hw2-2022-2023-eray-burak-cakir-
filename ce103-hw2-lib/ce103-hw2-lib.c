@@ -242,6 +242,13 @@ char* ce103_strcat(char* fiDest, char* fiSrc)
 int ce103_strcmp(const char* fiLhs, const char* fiRhs)
 {
 	//TODO:Start from Here...
+	{
+		int ret;
+		//"ret" is defined and compares two null-terminated byte strings lexicographically
+		while ((ret = *fiLhs - *fiRhs++) == 0 && *fiLhs++);
+		//return the variable until finish test
+		return ret;
+	}
 	return -2;
 }
 
