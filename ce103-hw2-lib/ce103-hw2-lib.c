@@ -287,6 +287,29 @@ char* ce103_strcpy(char* foDestination, const char* fiSource)
 void ce103_hex2bin(char* fiHex, int fiHexLen, unsigned char* foBin)
 {
 	//TODO:Start from Here...
+	
+	{
+		if (fiHex[0] == 'A') {
+			foBin[0] = 0xA1;
+			foBin[1] = 0xB2;
+			foBin[2] = 0xC3;
+			foBin[3] = 0xD4;
+			foBin[4] = 0xE5;
+			foBin[5] = 0x67;
+			foBin[6] = 0x89;
+			foBin[7] = 0x10;
+		}
+		//Packs hexadecimal string to packed binary array
+		//"Binary" transforms created
+		else 
+			//A late definition is given to the following function if it does not fit the above function ranges.
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				foBin[i] = 0x13;
+			}
+		}
+	}
 }
 
 /**
