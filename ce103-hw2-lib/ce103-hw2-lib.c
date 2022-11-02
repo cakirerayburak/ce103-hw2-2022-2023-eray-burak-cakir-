@@ -147,7 +147,17 @@ int fnCE103HW2Lib(unsigned char* fia, int fib, char* fic)
 int ce103_fibonacciNumber(int fiIndex)
 {
 	//TODO:Start from Here...
-	return -1;
+
+	int total = 0, a = 1, counter;
+
+	for (int i = 1; i <= fiIndex - 1; i++)
+	{
+		counter = total + a;
+		total = a;
+		a = counter;
+	}
+	fiIndex = total;
+	return total;
 }
 
 /**
