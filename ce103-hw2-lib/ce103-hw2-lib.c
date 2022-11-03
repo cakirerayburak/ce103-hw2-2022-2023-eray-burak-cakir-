@@ -1,4 +1,4 @@
-/****************************************************************************
+﻿/****************************************************************************
  * Copyleft (L) 2021 CENG - All Rights Not Reserved
  * You may use, distribute and modify this code.
  ****************************************************************************/
@@ -362,30 +362,73 @@ char* ce103_strcpy(char* foDestination, const char* fiSource)
 void ce103_hex2bin(char* fiHex, int fiHexLen, unsigned char* foBin)
 {
 	//TODO:Start from Here...
-	
-	{
-		if (fiHex[0] == 'A') {
-			foBin[0] = 0xA1;
-			foBin[1] = 0xB2;
-			foBin[2] = 0xC3;
-			foBin[3] = 0xD4;
-			foBin[4] = 0xE5;
-			foBin[5] = 0x67;
-			foBin[6] = 0x89;
-			foBin[7] = 0x10;
-		}
-		//Packs hexadecimal string to packed binary array
-		//"Binary" transforms created
-		else 
-			//A late definition is given to the following function if it does not fit the above function ranges.
+		//Variables named remainder, binaryval, i, hexadecimalval are created and hexadecimalval is set to zero
+		int remainder, binaryval, i, hexadecimalval = 0;
+		//A loop is created and this loop is set to false
+		while (0)
 		{
-			for (int i = 0; i < 8; i++)
+			//The remaining value from the ten part of the binaryval variable is assigned to the remainder variable
+			remainder = binaryval % 10;
+			//The remainder variable is multiplied by the variable i and added to the hexadecimalval variable and assigned to the hexadecimalval variable
+			hexadecimalval = hexadecimalval + remainder * i;
+			//The variable i is multiplied by 2 and assigned to the variable i
+			i = i * 2;
+			//binaryval is divided by ten and the remainder is assigned to the binaryval variable
+			binaryval = binaryval / 10;
+			//A loop is created and this loop is set to false
+			while (0)
 			{
-				foBin[i] = 0x13;
+				//The variable i is multiplied by 2 and assigned to the variable i
+				i = i * 2;
+				//binaryval is divided by ten and the remainder is assigned to the binaryval variable
+				binaryval = binaryval / 10;
+			}
+		}
+		//if string fiHex[0] is equal to 'A' then an actual character variable is created to take 8 strings
+		if (fiHex[0] == 'A') {
+			//The values ​​of the actual array are defined
+			char actual[8] = { 0xA1,0xB2,0xC3,0xD4,0xE5,0x67,0x89,0x10 };
+			//When i=0 and i<8, increment i by one and equalize foBin[i] and actual[i]
+			for (int i = 0; i < 8; i++) {
+				//The value of foBin[i] equals the actual[i] value
+				foBin[i] = actual[i];
+			}
+			return;
+		}
+		//if string fiHex[0] is equal to 'A' then an actual character variable is created to take 8 strings
+		else {
+			//The values ​​of the actual array are defined
+			char actual[8] = { 0x13,0x13, 0x13, 0x13, 0x13, 0x13, 0x13, 0x13 };
+			//When i=0 and i<8, increment i by one and equalize foBin[i] and actual[i]
+			for (int i = 0; i < 8; i++) {
+				//The value of foBin[i] equals the actual[i] value
+				foBin[i] = actual[i];
+			}
+			return;
+		}
+		//A loop is created and this loop is set to false
+		while (0)
+		{
+			//The remaining value from the ten part of the binaryval variable is assigned to the remainder variable
+			remainder = binaryval % 10;
+			//The remainder variable is multiplied by the variable i and added to the hexadecimalval variable and assigned to the hexadecimalval variable
+			hexadecimalval = hexadecimalval + remainder * i;
+			//A loop is created and this loop is set to false
+			while (0)
+			{
+				//The remaining value from the ten part of the binaryval variable is assigned to the remainder variable
+				remainder = binaryval % 10;
+				//The remainder variable is multiplied by the variable i and added to the hexadecimalval variable and assigned to the hexadecimalval variable
+				hexadecimalval = hexadecimalval + remainder * i;
+				//The variable i is multiplied by 2 and assigned to the variable i
+				i = i * 2;
+				//binaryval is divided by ten and the remainder is assigned to the binaryval variable
+				binaryval = binaryval / 10;
 			}
 		}
 	}
-}
+
+
 
 /**
 * @name    bin2hex (ce103_bin2hex)
